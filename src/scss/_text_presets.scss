@@ -1,0 +1,69 @@
+@font-face {
+  font-family: space-mono-regular;
+  src: url("@/assets/fonts/space_mono/SpaceMono-Regular.ttf");
+}
+
+@font-face {
+  font-family: space-mono-bold;
+  src: url("@/assets/fonts/space_mono/SpaceMono-Bold.ttf");
+}
+
+:root {
+  --space-mono-regular-stack: space-mono-regular, "Courier New", Courier, monospace;
+  --space-mono-bold-stack: space-mono-regular, "Courier New", Courier, monospace;
+}
+
+%text-preset-1 {
+  font-family: var(--space-mono-bold-stack);
+  font-size: 1.625rem;
+  line-height: 120%;
+}
+
+%text-preset-2 {
+  font-family: var(--space-mono-bold-stack);
+  font-size: 1.375rem;
+  line-height: 140%;
+}
+
+%text-preset-3 {
+  font-family: var(--space-mono-regular-stack);
+  font-size: 1.125rem;
+  line-height: 140%;
+}
+
+%text-preset-3-mobile {
+  @extend %text-preset-3;
+
+  font-size: 0.8125rem;
+}
+
+%text-preset-4 {
+  font-family: var(--space-mono-regular-stack);
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+%text-preset-5 {
+  font-family: var(--space-mono-bold-stack);
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+%text-preset-6 {
+  font-family: var(--space-mono-regular-stack);
+  font-size: 0.9375rem;
+  line-height: 150%;
+}
+
+%text-preset-7 {
+  font-family: var(--space-mono-regular-stack);
+  font-size: 0.8125rem;
+  line-height: 150%;
+}
+
+%text-preset-8 {
+  font-family: var(--space-mono-bold-stack);
+  font-size: 0.8125rem;
+  line-height: 140%;
+  letter-spacing: 0.15625rem;
+}

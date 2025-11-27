@@ -1,0 +1,80 @@
+@use "@/scss/breakpoints";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // outline: 1px solid red;
+}
+
+@font-face {
+  font-family: space-mono-regular;
+  src: url("@/assets/fonts/space_mono/SpaceMono-Regular.ttf");
+}
+
+@font-face {
+  font-family: space-mono-bold;
+  src: url("@/assets/fonts/space_mono/SpaceMono-Bold.ttf");
+}
+
+:root {
+  --color-neutral-900: rgb(20, 29, 47);
+  --color-neutral-800: rgb(30, 42, 71);
+  --color-neutral-700: rgb(43, 52, 66);
+  --color-neutral-500: rgb(75, 106, 155);
+  --color-neutral-300: rgb(105, 124, 154);
+  --color-neutral-200: rgb(144, 164, 212);
+  --color-neutral-100: rgb(246, 248, 255);
+  --color-neutral-000: rgb(255, 255, 255);
+  --color-blue-300: rgb(96, 171, 255);
+  --color-blue-500: rgb(0, 121, 255);
+  --color-red-500: rgb(247, 70, 70);
+
+  /* ... */
+
+  --space-mono-regular-stack: space-mono-regular, "Courier New", Courier, monospace;
+  --space-mono-bold-stack: space-mono-bold, "Courier New", Courier, monospace;
+
+  /* ... */
+
+  --duration: 0.33s;
+}
+
+:root.light {
+  --bg: var(--color-neutral-100);
+  --ui-color-primary: var(--color-neutral-000);
+  --ui-color-secondary: var(--color-neutral-100);
+  --text-color-primary: var(--color-neutral-900);
+  --text-color-secondary: var(--color-neutral-700);
+  --text-color-tertiary: var(--color-neutral-500);
+  --text-color-quaternary: var(--color-neutral-300);
+  --text-color-quinary: var(--color-neutral-500);
+  --text-color-accent: var(--color-blue-500);
+}
+
+:root.dark {
+  --bg: var(--color-neutral-900);
+  --ui-color-primary: var(--color-neutral-800);
+  --ui-color-secondary: var(--color-neutral-900);
+  --text-color-primary: var(--color-neutral-000);
+  --text-color-secondary: var(--color-neutral-000);
+  --text-color-tertiary: var(--color-neutral-000);
+  --text-color-quaternary: var(--color-neutral-200);
+  --text-color-quinary: var(--color-neutral-200);
+  --text-color-accent: var(--color-blue-300);
+}
+
+body {
+  background: var(--bg);
+  padding: 8.125rem 0;
+
+  @media (max-width: breakpoints.$tablet) {
+    padding: 2.5rem 2rem;
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    padding: 2rem 1rem;
+  }
+}

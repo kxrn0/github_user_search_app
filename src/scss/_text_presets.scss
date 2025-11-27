@@ -1,16 +1,7 @@
-@font-face {
-  font-family: space-mono-regular;
-  src: url("@/assets/fonts/space_mono/SpaceMono-Regular.ttf");
-}
-
-@font-face {
-  font-family: space-mono-bold;
-  src: url("@/assets/fonts/space_mono/SpaceMono-Bold.ttf");
-}
-
-:root {
-  --space-mono-regular-stack: space-mono-regular, "Courier New", Courier, monospace;
-  --space-mono-bold-stack: space-mono-regular, "Courier New", Courier, monospace;
+%text-preset-0 {
+  font-family: var(--space-mono-bold-stack);
+  font-size: 1.625rem;
+  line-height: 100%;
 }
 
 %text-preset-1 {

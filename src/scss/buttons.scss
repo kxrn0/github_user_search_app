@@ -1,0 +1,26 @@
+@use "@/scss/utils";
+@use "@/scss/text_presets";
+@use "@/scss/border_radii";
+@use "@/scss/breakpoints";
+
+%button-primary {
+  @extend %text-preset-5;
+  @extend %radius-10;
+  @extend %focus-visible;
+
+  background: var(--color-blue-500);
+  color: var(--color-neutral-000);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  transition: background-color var(--duration);
+
+  @media (hover: hover) {
+    &:hover {
+      background: var(--color-blue-300);
+    }
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    padding: 0.75rem 1.25rem;
+  }
+}

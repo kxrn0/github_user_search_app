@@ -10,7 +10,7 @@ import ThemeToggler from "./ThemeToggler.vue";
 </template>
 
 <style scoped lang="scss">
-@use "@/scss/_text_presets";
+@use "@/scss/text_presets";
 
 .navbar {
   display: flex;

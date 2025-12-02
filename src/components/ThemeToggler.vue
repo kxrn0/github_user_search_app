@@ -33,7 +33,9 @@ const icon = computed(() => (themeStore.theme.state === "light" ? IconMoon : Ico
 </template>
 
 <style scoped lang="scss">
-@use "@/scss/_text_presets";
+@use "@/scss/utils";
+@use "@/scss/border_radii";
+@use "@/scss/text_presets";
 
 .theme-toggler {
   --color: var(--text-color-quinary);
@@ -53,6 +55,9 @@ const icon = computed(() => (themeStore.theme.state === "light" ? IconMoon : Ico
   }
 
   .checkbox {
+    @extend %focus-visible;
+    @extend %radius-4;
+
     appearance: none;
     position: absolute;
     inset: 0;

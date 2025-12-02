@@ -6,7 +6,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // outline: 1px solid red;
 }
 
 @font-face {
@@ -52,6 +51,7 @@
   --text-color-quaternary: var(--color-neutral-300);
   --text-color-quinary: var(--color-neutral-500);
   --text-color-accent: var(--color-blue-500);
+  --shadow-color-primary: rgb(70, 96, 187, 0.2);
 }
 
 :root.dark {
@@ -64,11 +64,13 @@
   --text-color-quaternary: var(--color-neutral-200);
   --text-color-quinary: var(--color-neutral-200);
   --text-color-accent: var(--color-blue-300);
+  --shadow-color-primary: transparent;
 }
 
 body {
   background: var(--bg);
   padding: 8.125rem 0;
+  overflow-x: hidden;
 
   @media (max-width: breakpoints.$tablet) {
     padding: 2.5rem 2rem;
@@ -76,5 +78,17 @@ body {
 
   @media (max-width: breakpoints.$mobile) {
     padding: 2rem 1rem;
+  }
+}
+
+@keyframes expand {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
   }
 }

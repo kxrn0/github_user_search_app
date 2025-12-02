@@ -1,3 +1,5 @@
+@use "@/scss/breakpoints";
+
 %text-preset-0 {
   font-family: var(--space-mono-bold-stack);
   font-size: 1.625rem;
@@ -20,12 +22,10 @@
   font-family: var(--space-mono-regular-stack);
   font-size: 1.125rem;
   line-height: 140%;
-}
 
-%text-preset-3-mobile {
-  @extend %text-preset-3;
-
-  font-size: 0.8125rem;
+  @media (max-width: breakpoints.$mobile) {
+    font-size: 0.8125rem;
+  }
 }
 
 %text-preset-4 {

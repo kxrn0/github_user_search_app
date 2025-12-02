@@ -12,7 +12,7 @@ const props = defineProps<{
   <div
     class="slide-container"
     :style="{
-      '--time': `${props.time}s`,
+      '--transition-duration': `${props.time}s`,
       '--x-per-enter': `${props.xPerEnter}%`,
       '--y-per-enter': `${props.yPerEnter}%`,
       '--x-per-leave': `${props.xPerLeave}%`,
@@ -30,8 +30,8 @@ const props = defineProps<{
   .slide-enter-active,
   .slide-leave-active {
     transition:
-      transform var(--time),
-      opacity var(--time);
+      transform var(--transition-duration),
+      opacity var(--transition-duration) !important;
   }
 
   .slide-enter-from {

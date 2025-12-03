@@ -30,7 +30,7 @@ function search() {
         @blur="isFocused = false"
       />
       <p v-if="props.showError" class="error">No results</p>
-      <button class="button" @click="search">Search</button>
+      <button class="button">Search</button>
     </label>
   </form>
 </template>

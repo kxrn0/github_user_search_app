@@ -103,10 +103,11 @@ const userBlog = computed(() => {
   row-gap: 1.5rem;
 
   .avatar {
+    @extend %radius-full;
+
     width: 7.25rem;
     min-width: 7.25rem;
     aspect-ratio: 1;
-    border-radius: 100%;
     grid-area: P;
   }
 

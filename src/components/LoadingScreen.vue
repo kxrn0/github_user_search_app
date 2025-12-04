@@ -20,11 +20,12 @@
 
   &::before,
   &::after {
+    @extend %radius-full;
+
     content: "";
     background: var(--color-blue-500);
     width: 10rem;
     height: 10rem;
-    border-radius: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
